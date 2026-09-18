@@ -8,6 +8,31 @@ branch was merged and retired.
 
 ---
 
+## 2026-09-18 — ALU3 change request
+
+The page was rebuilt to `change-requests/alu3_mockup_v13-1.html`. The brand is now
+**ALU3** ("a brand of StalBruk Sp. z o.o."), and the offer is aluminium gates and fences,
+glass railings and glass canopies. Block paving and earthworks are gone.
+
+- _Structure:_ header → hero with a stats strip → services (snap row) → full-bleed
+  gallery → objections → why us → process → FAQ → safe contract → contact with the
+  form → footer. `Objections.astro`, `WhyUs.astro` and `Contact.astro` are new.
+  `Arguments`, `Promises`, `QuickQuote`, `BeforeAfter`, `FormSection` and `Contacts`
+  have been deleted, along with the map facade, the hero form and the mobile quick form.
+- _Kept:_ the lead form with every field it had before (name, phone, service, town,
+  optional email and message, GDPR consent, honeypot, UTM/gclid tracking),
+  `/api/lead` → Web3Forms + Telegram, the thank-you redirect, service pre-selection from
+  the service cards, the sticky mobile bar, the PL/EN locales and the language hint.
+- _Service values_ (`src/lib/services.ts`) are now `brama-przesuwna`,
+  `brama-skrzydlowa`, `furtka`, `ogrodzenie`, `automatyka`, `balustrada`, `zadaszenie`
+  and `nie-wiem`. The Telegram markers follow them.
+- _Where this departs from the mockup, and why:_ accent text on dark bands uses a light
+  tint, because the mockup's value fails contrast; form fields keep visible labels; the
+  field underline is lighter so it clears 3:1. See `CLAUDE.md`.
+- _Unconfirmed values:_ the phone `+48 510 318 834`, the email `biuro@alu3.pl`, the
+  figures, the prices and the NIP are taken as the mockup shows them. `_meta.demo` stays
+  `true`.
+
 ## 2026-08-18 — conversion and design pass
 
 The client's verdict on the Custo-derived design was that the page read as a product
@@ -191,7 +216,7 @@ Axe cannot catch any of this — contrast over a photograph is not something it 
 
 ## Open item 3 — demo data must be replaced before launch
 
-`src/i18n/{pl,en}.json` carry invented values: trust figures (12 years, 380 projects, 5-year warranty), phone `+48 601 234 567`, email, lead time, company name and address, and the three service prices added on 2026-08-18 (`services.items[].price`: 6 500 zł, 180 zł/m², individual quote — the first matches the figure the FAQ already quoted). The NIP is deliberately impossible (`000-000-00-00`) so it cannot collide with a real company.
+`src/i18n/{pl,en}.json` carry values that have not been confirmed: the trust figures (12 years, 380 projects, 5-year warranty, 100% in-house production), the phone `+48 510 318 834`, the email `biuro@alu3.pl`, the company name and address, and the three service prices (from 12 000 zł, 6 000 zł and 2 500 zł). All of them come from the ALU3 mockup. The NIP is deliberately impossible (`000-000-00-00`), so it cannot collide with a real company.
 
 `_meta.demo: true` marks this, and `tests/i18n.test.ts` fails while it is true. Replace the values, set the flag to `false`, and the suite goes green. Do not clear the flag while the values are still invented.
 

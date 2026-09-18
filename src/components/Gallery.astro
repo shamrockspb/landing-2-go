@@ -1,14 +1,13 @@
 ---
 import SectionHeading from './SectionHeading.astro';
 import { Image } from 'astro:assets';
-import BeforeAfter from './BeforeAfter.astro';
 import { getDictionary, type Locale } from '../i18n';
-import heroPhoto from '../assets/photos/hero.jpg';
-import pavingPhoto from '../assets/photos/paving.jpg';
-import earthworksPhoto from '../assets/photos/earthworks.jpg';
-import work1Photo from '../assets/photos/work-1.jpg';
-import work2Photo from '../assets/photos/work-2.jpg';
-import work3Photo from '../assets/photos/work-3.jpg';
+import gateSliding from '../assets/photos/gate-sliding.jpg';
+import wicket from '../assets/photos/wicket.jpg';
+import fenceVertical from '../assets/photos/fence-vertical.jpg';
+import fenceHorizontal from '../assets/photos/fence-horizontal.jpg';
+import profileDetail from '../assets/photos/profile-detail.jpg';
+import stairRailing from '../assets/photos/stair-railing.jpg';
 
 interface Props {
   locale: Locale;
@@ -16,38 +15,29 @@ interface Props {
 
 const { locale } = Astro.props;
 const t = getDictionary(locale);
-const IMAGES = [heroPhoto, pavingPhoto, earthworksPhoto, work1Photo, work2Photo, work3Photo];
+// Same order as t.gallery.items.
+const IMAGES = [gateSliding, wicket, fenceVertical, fenceHorizontal, profileDetail, stairRailing];
 ---
 
-<section id="realizacje" class="section">
-  <div class="mx-auto max-w-page px-6 lg:px-10">
-    <SectionHeading kicker={t.gallery.title} title={t.gallery.lead} />
+{/* The grid runs edge to edge; only the heading keeps the content column. */}
+<section id="realizacje" class="band bg-paper-dim">
+  <SectionHeading kicker={t.gallery.kicker} title={t.gallery.title} class="wrap mb-6" />
 
+  <ul class="gallery-grid">
     {
-      /* The reference's product image card grid: three up on desktop, one on
-        mobile. The horizontal snap-scroller this replaced hid four of the six
-        photographs behind a gesture. */
+      t.gallery.items.map((item, index) => (
+        <li class="gallery-item">
+          <Image
+            src={IMAGES[index]}
+            alt={item.alt}
+            widths={[400, 600, 800]}
+            sizes="(min-width: 820px) 33vw, 50vw"
+            loading="lazy"
+            quality={72}
+          />
+          <p class="gallery-cap">{item.caption}</p>
+        </li>
+      ))
     }
-    <ul class="mt-12 grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-3">
-      {
-        t.gallery.items.map((item, index) => (
-          <li>
-            <div class="relative media aspect-[3/2]">
-              <Image
-                src={IMAGES[index]}
-                alt={item.alt}
-                widths={[400, 640, 800]}
-                sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                loading="lazy"
-                quality={72}
-              />
-            </div>
-            <p class="t-label mt-3 text-muted">{item.caption}</p>
-          </li>
-        ))
-      }
-    </ul>
-
-    <BeforeAfter locale={locale} />
-  </div>
+  </ul>
 </section>
