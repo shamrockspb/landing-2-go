@@ -37,5 +37,6 @@ npm run check:copy   # fails if Polish diacritics appear outside src/i18n/
 - The primary action is `.btn-primary`, filled in the accent and darkening to accent-dim on hover. Beside it on dark bands sits `.btn-ghost`; on light bands the secondary action is `.btn-outline`. Red appears only on form errors, and on the graphite band errors use `--color-error-on-dark`.
 - Shadows are banned everywhere, including the lead form: it sits on the graphite contact band with underlined fields. The underline uses `--color-field` (3.39:1), not the mockup's hairline (1.56:1).
 - Every section opens with `SectionHeading.astro` (kicker, `h2`, optional lead). Pass `tone="dark"` on graphite bands.
-- Text over a photograph appears only in the gallery captions, on a black gradient. If you change that gradient, re-check contrast against a white pixel: Lighthouse does not evaluate contrast over photographs.
+- Text never sits directly on a photograph. The before/after labels and the gallery's "+N" overlay sit on an ink plate. If you change a plate's opacity, re-check the contrast against a white pixel: Lighthouse does not evaluate contrast over photographs.
+- Gallery photos live in `src/assets/projects/<slug>/`, one folder per job. Every folder needs a `gallery.projects` entry in both dictionaries, with one alt per photo; the build fails otherwise. See "How to add a project" in `docs/HANDOFF.md`.
 - Never publish invented testimonials or unresolved `{{PLACEHOLDER}}` values.

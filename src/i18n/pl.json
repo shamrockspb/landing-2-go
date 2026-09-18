@@ -92,30 +92,56 @@
   "gallery": {
     "kicker": "Realizacje",
     "title": "Zobacz, jak to wygląda po odbiorze",
-    "items": [
+    "photos": {
+      "one": "{n} zdjęcie",
+      "few": "{n} zdjęcia",
+      "many": "{n} zdjęć",
+      "other": "{n} zdjęcia"
+    },
+    "open": "Zobacz",
+    "lightbox": {
+      "label": "Zdjęcia realizacji",
+      "close": "Zamknij",
+      "prev": "Poprzednie zdjęcie",
+      "next": "Następne zdjęcie"
+    },
+    "projects": [
       {
-        "caption": "Brama przesuwna, lamele pionowe",
-        "alt": "Brama przesuwna z pionowymi lamelami"
+        "id": "brama-lamele-pionowe",
+        "title": "Brama przesuwna i furtka, lamele pionowe",
+        "summary": "Brama przesuwna, furtka w murowanym słupku ze skrzynką na listy i ogrodzenie z pionowych lamel na podmurówce.",
+        "scope": ["Brama przesuwna", "Furtka ze słupkiem", "Ogrodzenie z lamel pionowych"],
+        "photoAlts": [
+          "Aluminiowa brama przesuwna z pionowymi lamelami przed nowoczesnym białym domem",
+          "Ta sama brama przesuwna na wprost, zamknięta, nad podjazdem z kostki",
+          "Brama przesuwna i biały słupek wejściowy ze skrzynką na listy",
+          "Furtka z pionowych lamel obok białego słupka ze skrzynką na listy",
+          "Przęsło ogrodzenia z pionowych lamel na białej podmurówce, z bliska"
+        ]
       },
       {
-        "caption": "Furtka i słup wejściowy ze skrzynką",
-        "alt": "Furtka i słup wejściowy"
+        "id": "ogrodzenie-cegla-panele",
+        "title": "Ogrodzenie panelowe na słupkach z cegły",
+        "summary": "Poziome panele aluminiowe między ceglanymi słupkami, brama przesuwna z napędem i dwie furtki, w tym jedna z domofonem.",
+        "scope": ["Ogrodzenie panelowe", "Brama przesuwna z napędem", "Furtki"],
+        "photoAlts": [
+          "Grafitowa brama przesuwna z napędem między ceglanymi słupkami, przy podjeździe z kostki",
+          "Furtka z poziomych paneli między ceglanymi słupkami, obok strzyżonych tui",
+          "Furtka z domofonem i skrzynką na listy w ceglanych słupkach, między żywopłotami",
+          "Przęsła ogrodzenia z poziomych paneli aluminiowych na ceglanej podmurówce"
+        ]
       },
       {
-        "caption": "Ogrodzenie — lamele pionowe",
-        "alt": "Ogrodzenie pionowe, lamele"
-      },
-      {
-        "caption": "Ogrodzenie — lamele poziome",
-        "alt": "Ogrodzenie poziome"
-      },
-      {
-        "caption": "Detal montażu profilu",
-        "alt": "Detal profilu aluminiowego"
-      },
-      {
-        "caption": "Balustrada schodowa, wnętrze",
-        "alt": "Balustrada schodowa aluminiowa"
+        "id": "inne",
+        "title": "Inne realizacje",
+        "summary": "Ogrodzenia z lamel, detal montażu i balustrada schodowa z różnych zleceń.",
+        "scope": ["Ogrodzenia z lamel", "Balustrada schodowa"],
+        "photoAlts": [
+          "Ogrodzenie z pionowych lamel na podmurówce, rzucające cień na kostkę",
+          "Ogrodzenie z poziomych lamel aluminiowych wzdłuż trawnika",
+          "Detal montażu profili aluminiowych na tle drewnianych lamel",
+          "Aluminiowa balustrada schodowa we wnętrzu domu"
+        ]
       }
     ],
     "beforeAfter": {

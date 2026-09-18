@@ -92,30 +92,56 @@
   "gallery": {
     "kicker": "Our work",
     "title": "See how it looks on handover",
-    "items": [
+    "photos": {
+      "one": "{n} photo",
+      "few": "{n} photos",
+      "many": "{n} photos",
+      "other": "{n} photos"
+    },
+    "open": "View",
+    "lightbox": {
+      "label": "Project photos",
+      "close": "Close",
+      "prev": "Previous photo",
+      "next": "Next photo"
+    },
+    "projects": [
       {
-        "caption": "Sliding gate, vertical slats",
-        "alt": "Sliding gate with vertical slats"
+        "id": "brama-lamele-pionowe",
+        "title": "Sliding gate and wicket, vertical slats",
+        "summary": "A sliding gate, a wicket set in a rendered post with a letterbox, and a vertical-slat fence on a plinth.",
+        "scope": ["Sliding gate", "Wicket and post", "Vertical-slat fence"],
+        "photoAlts": [
+          "Aluminium sliding gate with vertical slats in front of a modern white house",
+          "The same sliding gate head-on, closed, across a block-paved drive",
+          "Sliding gate and a white entrance post with a letterbox",
+          "Vertical-slat wicket gate beside a white post with a letterbox",
+          "Close-up of a vertical-slat fence panel on a white plinth"
+        ]
       },
       {
-        "caption": "Wicket gate and entrance post with letterbox",
-        "alt": "Wicket gate and entrance post"
+        "id": "ogrodzenie-cegla-panele",
+        "title": "Panel fence on brick pillars",
+        "summary": "Horizontal aluminium panels between brick pillars, a motorised sliding gate and two wicket gates, one with an intercom.",
+        "scope": ["Panel fencing", "Motorised sliding gate", "Wicket gates"],
+        "photoAlts": [
+          "Graphite motorised sliding gate between brick pillars beside a block-paved drive",
+          "Horizontal-panel wicket gate between brick pillars next to clipped conifers",
+          "Wicket gate with an intercom and a letterbox in brick pillars, between hedges",
+          "Horizontal aluminium fence panels on a brick plinth"
+        ]
       },
       {
-        "caption": "Fence — vertical slats",
-        "alt": "Fence with vertical slats"
-      },
-      {
-        "caption": "Fence — horizontal slats",
-        "alt": "Fence with horizontal slats"
-      },
-      {
-        "caption": "Profile fixing detail",
-        "alt": "Detail of an aluminium profile"
-      },
-      {
-        "caption": "Stair railing, interior",
-        "alt": "Aluminium stair railing"
+        "id": "inne",
+        "title": "Other work",
+        "summary": "Slatted fences, a fixing detail and a stair railing from various jobs.",
+        "scope": ["Slatted fencing", "Stair railing"],
+        "photoAlts": [
+          "Vertical-slat fence on a plinth casting shadows on paving",
+          "Horizontal aluminium slat fence along a lawn",
+          "Detail of aluminium profiles fixed against timber slats",
+          "Aluminium stair railing inside a house"
+        ]
       }
     ],
     "beforeAfter": {

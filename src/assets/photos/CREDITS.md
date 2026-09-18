@@ -1,19 +1,21 @@
 # Photo credits
 
-All six photographs come from the ALU3 change request
-(`change-requests/alu3_mockup_v13-1.html`), where they were embedded as base64.
-They show aluminium gates, fences and railings and were supplied with the
-client's mockup. Before launch, confirm with the client that these are their
-own completed projects and that they may be published.
+Gallery and hero photographs live in `src/assets/projects/<slug>/`, one folder
+per job. They were supplied by the client, in two batches: the photos embedded
+in the ALU3 mockup (`change-requests/alu3_mockup_v13-1.html`), and
+`change-requests/assets/photos-1` and `photos-2`. Before launch, confirm with the
+client that these are their own completed projects and that they may be
+published.
 
-| File                   | Used in         | Mockup caption                      |
-| ---------------------- | --------------- | ----------------------------------- |
-| `gate-sliding.jpg`     | hero, gallery 1 | Brama przesuwna, lamele pionowe     |
-| `wicket.jpg`           | gallery 2       | Furtka i słup wejściowy ze skrzynką |
-| `fence-vertical.jpg`   | gallery 3       | Ogrodzenie — lamele pionowe         |
-| `fence-horizontal.jpg` | gallery 4       | Ogrodzenie — lamele poziome         |
-| `profile-detail.jpg`   | gallery 5       | Detal montażu profilu               |
-| `stair-railing.jpg`    | gallery 6       | Balustrada schodowa, wnętrze        |
+| Folder                    | Files | Source                                                                                                  |
+| ------------------------- | ----- | ------------------------------------------------------------------------------------------------------- |
+| `brama-lamele-pionowe`    | 01–05 | 01, 04 from the mockup; 02, 03, 05 from `photos-1` (…316, …317, …314). 01 is also the hero.             |
+| `ogrodzenie-cegla-panele` | 01–04 | `photos-2` (…044, …043, …046, …045)                                                                     |
+| `inne`                    | 01–04 | from the mockup: vertical-slat fence (another house), horizontal-slat fence, profile detail, stair rail |
+
+Skipped as duplicates: `photos-1/…313` (identical to the mockup's wicket shot),
+`…315` (identical to the mockup's sliding-gate shot) and `…312` (near-duplicate
+of `…313`).
 
 ## Before/after slider (demo pair)
 

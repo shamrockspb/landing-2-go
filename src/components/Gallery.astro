@@ -1,14 +1,8 @@
 ---
 import SectionHeading from './SectionHeading.astro';
+import ProjectGallery from './ProjectGallery.astro';
 import BeforeAfter from './BeforeAfter.astro';
-import { Image } from 'astro:assets';
 import { getDictionary, type Locale } from '../i18n';
-import gateSliding from '../assets/photos/gate-sliding.jpg';
-import wicket from '../assets/photos/wicket.jpg';
-import fenceVertical from '../assets/photos/fence-vertical.jpg';
-import fenceHorizontal from '../assets/photos/fence-horizontal.jpg';
-import profileDetail from '../assets/photos/profile-detail.jpg';
-import stairRailing from '../assets/photos/stair-railing.jpg';
 
 interface Props {
   locale: Locale;
@@ -16,33 +10,14 @@ interface Props {
 
 const { locale } = Astro.props;
 const t = getDictionary(locale);
-// Same order as t.gallery.items.
-const IMAGES = [gateSliding, wicket, fenceVertical, fenceHorizontal, profileDetail, stairRailing];
 ---
 
-{/* The grid runs edge to edge; only the heading keeps the content column. */}
 <section id="realizacje" class="band bg-paper-dim">
-  <SectionHeading kicker={t.gallery.kicker} title={t.gallery.title} class="wrap mb-6" />
-
-  <ul class="gallery-grid">
-    {
-      t.gallery.items.map((item, index) => (
-        <li class="gallery-item">
-          <Image
-            src={IMAGES[index]}
-            alt={item.alt}
-            widths={[400, 600, 800]}
-            sizes="(min-width: 820px) 33vw, 50vw"
-            loading="lazy"
-            quality={72}
-          />
-          <p class="gallery-cap">{item.caption}</p>
-        </li>
-      ))
-    }
-  </ul>
-
-  <div class="wrap mt-12">
-    <BeforeAfter locale={locale} />
+  <div class="wrap">
+    <SectionHeading kicker={t.gallery.kicker} title={t.gallery.title} />
+    <ProjectGallery locale={locale} />
+    <div class="mt-16">
+      <BeforeAfter locale={locale} />
+    </div>
   </div>
 </section>

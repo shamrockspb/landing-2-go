@@ -8,6 +8,28 @@ branch was merged and retired.
 
 ---
 
+## 2026-09-18 — gallery grouped by project
+
+"Realizacje" now shows whole jobs, not a flat grid. The newest job leads as a wide feature: a cover,
+what was installed, and a strip of its other shots. The rest follow as two-up cards. Every photo
+opens a shared lightbox (`Lightbox.astro`, `src/scripts/lightbox.ts`) scoped to its own project. The
+lightbox is a native `<dialog>` with a scroll-snap track, ←/→ keys and Esc. Each link's `href` is
+the full-size image, so without JavaScript a click still opens the photo. The gallery deliberately
+stays on the landing page. Once there are about six projects, add a `/realizacje` page (and a page
+per project, for local SEO) and show only the newest four here. The data model already supports
+this.
+
+**How to add a project**
+
+1. Create `src/assets/projects/<slug>/` and put the photos in it as `01.jpg`, `02.jpg`, and so on.
+   Filename order is display order, and `01` is the cover.
+2. Add an entry with `"id": "<slug>"` to `gallery.projects` in **both** `src/i18n/pl.json` and
+   `en.json`: `title`, `summary`, `scope[]`, and `photoAlts[]` with exactly one alt per photo, in
+   file order. The position in the array is the position on the page, so put the newest job first
+   and keep `inne` last.
+3. `npm run build` fails with "Gallery projects are out of sync" if a folder has no entry, an entry
+   has no folder, or the alt count is wrong. `tests/projects.test.ts` checks the same thing.
+
 ## 2026-09-18 — ALU3 change request
 
 The page was rebuilt to `change-requests/alu3_mockup_v13-1.html`. The brand is now
