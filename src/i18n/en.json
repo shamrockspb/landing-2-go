@@ -409,11 +409,6 @@
     "backHome": "Back to the homepage",
     "callNow": "Call now"
   },
-  "langHint": {
-    "message": "Ta strona jest również dostępna po polsku.",
-    "cta": "Przełącz na polski",
-    "dismiss": "Dismiss"
-  },
   "privacy": {
     "seoTitle": "Privacy policy | ALU3",
     "title": "Privacy policy",

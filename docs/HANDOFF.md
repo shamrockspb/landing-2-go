@@ -19,6 +19,8 @@ stays on the landing page. Once there are about six projects, add a `/realizacje
 per project, for local SEO) and show only the newest four here. The data model already supports
 this.
 
+Language hint bar removed; the header switch carries a globe icon.
+
 **How to add a project**
 
 1. Create `src/assets/projects/<slug>/` and put the photos in it as `01.jpg`, `02.jpg`, and so on.
