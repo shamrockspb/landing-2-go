@@ -117,7 +117,15 @@
         "caption": "Stair railing, interior",
         "alt": "Aluminium stair railing"
       }
-    ]
+    ],
+    "beforeAfter": {
+      "title": "A driveway, before and after",
+      "beforeLabel": "Before",
+      "afterLabel": "After",
+      "hint": "Drag the slider to compare",
+      "beforeAlt": "Driveway before the work: uneven ground with ruts and remains of the old surface",
+      "afterAlt": "The same driveway after completion: level block paving with kerbs and linear drainage"
+    }
   },
   "pain": {
     "kicker": "Sound familiar?",

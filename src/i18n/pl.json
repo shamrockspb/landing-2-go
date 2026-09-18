@@ -117,7 +117,15 @@
         "caption": "Balustrada schodowa, wnętrze",
         "alt": "Balustrada schodowa aluminiowa"
       }
-    ]
+    ],
+    "beforeAfter": {
+      "title": "Podjazd przed i po",
+      "beforeLabel": "Przed",
+      "afterLabel": "Po",
+      "hint": "Przeciągnij suwak, żeby porównać",
+      "beforeAlt": "Podjazd przed remontem: nierówny grunt z koleinami i resztkami starej nawierzchni",
+      "afterAlt": "Ten sam podjazd po realizacji: równa kostka brukowa z krawężnikiem i odwodnieniem liniowym"
+    }
   },
   "pain": {
     "kicker": "Znasz to?",

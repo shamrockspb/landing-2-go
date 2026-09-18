@@ -17,12 +17,17 @@ glass railings and glass canopies. Block paving and earthworks are gone.
 - _Structure:_ header → hero with a stats strip → services (snap row) → full-bleed
   gallery → objections → why us → process → FAQ → safe contract → contact with the
   form → footer. `Objections.astro`, `WhyUs.astro` and `Contact.astro` are new.
-  `Arguments`, `Promises`, `QuickQuote`, `BeforeAfter`, `FormSection` and `Contacts`
-  have been deleted, along with the map facade, the hero form and the mobile quick form.
+  `Arguments`, `Promises`, `QuickQuote`, `FormSection` and `Contacts` have been deleted,
+  along with the map facade, the hero form and the mobile quick form.
 - _Kept:_ the lead form with every field it had before (name, phone, service, town,
   optional email and message, GDPR consent, honeypot, UTM/gclid tracking),
   `/api/lead` → Web3Forms + Telegram, the thank-you redirect, service pre-selection from
   the service cards, the sticky mobile bar, the PL/EN locales and the language hint.
+- _Before/after slider:_ `BeforeAfter.astro` ("Podjazd przed i po") was restored under the
+  gallery at the client's request, with the original driveway copy and the old stock
+  pair, and it is always rendered. **Before launch:** replace `before-driveway.jpg` and
+  `after-driveway.jpg` with a genuine pair from one site, shot from the same position.
+  The current pair is two unrelated photographs (see `CREDITS.md`).
 - _Service values_ (`src/lib/services.ts`) are now `brama-przesuwna`,
   `brama-skrzydlowa`, `furtka`, `ogrodzenie`, `automatyka`, `balustrada`, `zadaszenie`
   and `nie-wiem`. The Telegram markers follow them.
